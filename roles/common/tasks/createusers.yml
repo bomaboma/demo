@@ -1,5 +1,4 @@
 ---
 - name: create user one, two, three, four, five
   user: name={{item}} state=present shell=/bin/bash
-  with_items:
-    "{{people}}"
+  with_items: "{{people}}"
