@@ -1,0 +1,6 @@
+---
+- name: create directory new_hire
+  file: path=/home/{{item}}/new_hire state=directory owner={{item}}
+- name: copy test2 file to remote machines
+  copy: src=/home/boma/test2 dest=/home/{{item}}/new_hire
+  with_items: "{{people}}"

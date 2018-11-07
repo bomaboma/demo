@@ -1,0 +1,4 @@
+---
+# main.yml file for tasks
+include: createusers.yml
+include: copy.yml
