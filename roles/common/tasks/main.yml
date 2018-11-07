@@ -1,4 +1,7 @@
 ---
 # main.yml file for tasks
-include: createusers.yml
-include: copy.yml
+#include: createusers.yml
+#include: copy.yml
+- name: create user one, two, three, four
+  user: name={{item}} state=present shell=/bin/bash
+  with_items: {{people}}
